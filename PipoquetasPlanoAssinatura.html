@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pipoquetas - Planos e Assinaturas</title>
+  <!-- Ícones do Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- CSS em arquivo separado -->
+  <link rel="stylesheet" href="css/pipoquetas.css" />
+</head>
+<body>
+
+  <!-- CABEÇALHO (mesma estrutura da tela inicial) -->
+  <header>
+    <div class="header-left">
+      <i class="fa-solid fa-bars menu-btn" id="menuBtn"></i>
+      <div class="logo">PIPOQUETAS</div>
+    </div>
+
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Procure Filmes, Atores, Perfis e Críticos" />
+      <div class="search-icons">
+        <i class="fa-solid fa-sliders"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <i class="fa-regular fa-bell notification-icon"></i>
+      <i class="fa-solid fa-circle-user user-avatar-icon" id="userAvatar" title="Minha conta"></i>
+    </div>
+  </header>
+
+  <!-- ESTRUTURA LATERAL + CONTEÚDO -->
+  <div class="main-container">
+    <!-- MENU LATERAL -->
+    <aside id="sidebar">
+      <div class="nav-group">
+        <a class="nav-icon active" data-nav="home"><i class="fa-solid fa-house"></i></a>
+        <a class="nav-icon" data-nav="explore"><i class="fa-solid fa-globe"></i></a>
+        <a class="nav-icon" data-nav="colecoes"><i class="fa-solid fa-cube"></i></a>
+        <a class="nav-icon" data-nav="favoritos"><i class="fa-regular fa-heart"></i></a>
+        <a class="nav-icon" data-nav="listas"><i class="fa-solid fa-list-check"></i></a>
+        <a class="nav-icon" data-nav="pastas"><i class="fa-regular fa-folder"></i></a>
+      </div>
+
+      <div class="nav-group">
+        <a class="nav-icon" data-nav="planos"><i class="fa-regular fa-star"></i></a>
+        <a class="nav-icon" data-nav="config"><i class="fa-solid fa-gear"></i></a>
+        <a class="nav-icon" data-nav="sair"><i class="fa-solid fa-right-from-bracket"></i></a>
+      </div>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+      <!-- PLATAFORMAS DE STREAMING -->
+      <section class="platforms-section">
+        <h2 class="section-title">Plataformas de Streaming</h2>
+        <div class="platforms-row">
+          <div class="platform-badge disney">Disney+</div>
+          <div class="platform-badge netflix">NETFLIX</div>
+          <div class="platform-badge hbomax">HBO<span>max</span></div>
+          <div class="platform-badge globoplay">globoplay</div>
+          <div class="platform-badge primevideo"><i class="fa-solid fa-play"></i>&nbsp;prime video</div>
+          <div class="platform-badge telecine">TELECINE</div>
+        </div>
+      </section>
+
+      <!-- PLANOS PIPOPLUS+ -->
+      <section class="plans-section">
+        <div class="section-header">
+          <h2 class="section-title">Seja PipoPlus+</h2>
+          <div class="slider-controls">
+            <button class="slider-btn" id="plansPrev" aria-label="Plano anterior"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="slider-btn" id="plansNext" aria-label="Próximo plano"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="plans-grid" id="plansGrid">
+          <article class="plan-card" data-plan="bronze">
+            <span class="plan-tier">BRONZE</span>
+            <p class="plan-price">R$29<span>/mês</span></p>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check"></i> Acesso básico</li>
+              <li><i class="fa-solid fa-check"></i> Suporte por email</li>
+              <li><i class="fa-solid fa-check"></i> 5 projetos ativos</li>
+              <li><i class="fa-solid fa-check"></i> Armazenamento 1GB</li>
+            </ul>
+            <button class="plan-btn plan-btn--bronze">Saiba mais</button>
+          </article>
+
+          <article class="plan-card plan-card--recommended" data-plan="ouro">
+            <span class="plan-badge">RECOMENDADO</span>
+            <span class="plan-tier">OURO</span>
+            <p class="plan-price">R$99<span>/mês</span></p>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check"></i> Exemplo 1</li>
+              <li><i class="fa-solid fa-check"></i> Exemplo 2</li>
+              <li><i class="fa-solid fa-check"></i> Exemplo 3</li>
+              <li><i class="fa-solid fa-check"></i> Exemplo 4</li>
+              <li><i class="fa-solid fa-check"></i> Exemplo 5</li>
+            </ul>
+            <button class="plan-btn plan-btn--ouro">Saiba mais</button>
+          </article>
+
+          <article class="plan-card" data-plan="prata">
+            <span class="plan-tier">PRATA</span>
+            <p class="plan-price">R$59<span>/mês</span></p>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check"></i> Acesso avançado</li>
+              <li><i class="fa-solid fa-check"></i> Suporte por chat</li>
+              <li><i class="fa-solid fa-check"></i> 20 projetos ativos</li>
+              <li><i class="fa-solid fa-check"></i> Armazenamento 10GB</li>
+              <li><i class="fa-solid fa-check"></i> Relatórios básicos</li>
+            </ul>
+            <button class="plan-btn plan-btn--prata">Saiba mais</button>
+          </article>
+        </div>
+      </section>
+
+      <!-- RODAPÉ -->
+      <footer class="site-footer">
+        <div class="footer-brand">
+          <div class="footer-logo-icon">🍿</div>
+          <div class="footer-logo-text">PIPOQUETAS</div>
+        </div>
+
+        <div class="footer-col">
+          <a href="#">Menu inicial</a>
+          <a href="#">Social</a>
+          <a href="#">Explore</a>
+          <a href="#">Favoritos</a>
+          <a href="#">Avaliações</a>
+          <a href="#">Minhas coleções</a>
+        </div>
+
+        <div class="footer-col">
+          <a href="#">Planos &amp; Assinaturas</a>
+          <a href="#">Configurações</a>
+          <a href="#">Perfil</a>
+          <a href="#">Notificações</a>
+          <a href="#" class="footer-logout">Sair</a>
+        </div>
+
+        <div class="footer-col footer-team">
+          <h3>PROJETO INTEGRADOR</h3>
+          <p class="footer-team-sub">Grupo por:</p>
+          <div class="footer-team-body">
+            <ul class="footer-team-list">
+              <li>Rafael Rossi</li>
+              <li>Vitor Nunes</li>
+              <li>Rhian Victor</li>
+              <li>Matheus Gonçalves</li>
+            </ul>
+            <div class="footer-team-badge">OSB</div>
+          </div>
+        </div>
+
+        <div class="footer-col footer-contact">
+          <h3>Entre em Contato:</h3>
+          <div class="footer-icons">
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" aria-label="E-mail"><i class="fa-regular fa-envelope"></i></a>
+            <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          </div>
+          <h3>Siga Nossas Redes Sociais</h3>
+          <div class="footer-icons">
+            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- JS em arquivo separado -->
+  <script src="js/planos.js" defer></script>
+</body>
+</html>
